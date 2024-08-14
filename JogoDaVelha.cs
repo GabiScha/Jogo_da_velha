@@ -22,6 +22,12 @@ namespace JogoDaVelha
         {
             int cont = 0;
             string[,] m = new string[3, 3];
+            string jogador = "";
+            int row;
+            int col;
+
+            int row = int.Parse(txtrow.Text);
+            int row = int.Parse(txtrow.Text);
 
 
 
@@ -30,16 +36,20 @@ namespace JogoDaVelha
             {
                 for (int j = 0; j < m.GetLength(1); j++, cont += 5)
                 {
-                    m[i, j] = cont;
+
+                    m[i, j] = "-";
                 }
             }
 
+
+            lbljogodavelha.Text = "";
             for (int i = 0; i < m.GetLength(0); i++)
             {
+                
                 for (int j = 0; j < m.GetLength(1); j++)
                 {
 
-                    lbljogodavelha.Text +=" "m[i, j] + " ";
+                    lbljogodavelha.Text +="|" + m[i, j] + "|";
 
                 }
                 lbljogodavelha.Text += "\n";
